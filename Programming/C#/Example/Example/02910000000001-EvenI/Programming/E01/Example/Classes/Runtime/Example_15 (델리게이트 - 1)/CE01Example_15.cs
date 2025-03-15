@@ -1,5 +1,5 @@
-#define P_E01_EXAMPLE_15_01
-#define P_E01_EXAMPLE_15_02
+//#define P_E01_EXAMPLE_15_01
+//#define P_E01_EXAMPLE_15_02
 #define P_E01_EXAMPLE_15_03
 
 using System;
@@ -33,14 +33,14 @@ using P_E01_EXAMPLE_15 = Example._02910000000001_EvenI.Programming.E01.Example.C
  * 것을 알 수 있다.
  */
 
-#if !P_E01_EXAMPLE_15_01 && P_E01_EXAMPLE_15_02
+#if P_E01_EXAMPLE_15_03 && (!P_E01_EXAMPLE_15_01 && !P_E01_EXAMPLE_15_02)
 /** 
  * 확장 클래스 
  */
 public static partial class CE01Extension_15
 {
 	/** 값을 정렬한다 */
-	public static void E01ExSort_15<T>(this List<T> a_oSender, 
+	public static void E01ExSort_15<T>(this List<T> a_oSender,
 		P_E01_EXAMPLE_15.CE01Example_15.E01Compare_15<T> a_oCompare)
 	{
 		for(int i = 1; i < a_oSender.Count; ++i)
@@ -63,7 +63,7 @@ public static partial class CE01Extension_15
 		}
 	}
 }
-#endif // #if !P_E01_EXAMPLE_15_01 && P_E01_EXAMPLE_15_02
+#endif // #if P_E01_EXAMPLE_15_03 && (!P_E01_EXAMPLE_15_01 && !P_E01_EXAMPLE_15_02)
 
 namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_15
 {
@@ -76,40 +76,38 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		public static void Start(string[] args)
 		{
 #if P_E01_EXAMPLE_15_01
-			int nLhs = 0;
-			int nRhs = 0;
-
 			Console.Write("정수 (2 개) 입력 : ");
 			var oTokens = Console.ReadLine().Split();
 
-			nLhs = int.Parse(oTokens[0]);
-			nRhs = int.Parse(oTokens[1]);
+			int.TryParse(oTokens[0], out int nValA);
+			int.TryParse(oTokens[1], out int nValB);
 
-			E01Compare_15 oE01Compare_15 = E01CompareInt_15;
-
+			E01Compare_15 oCompare = E01CompareVal_15;
 			Console.WriteLine("\n=====> 비교 결과 <=====");
-			Console.WriteLine("{0} E01Compare_15 {1} = {2}", nLhs, nRhs, oE01Compare_15(nLhs, nRhs));
 
+			int nResult = oCompare(nValA, nValB);
+			Console.WriteLine("{0} Compare {1} = {2}", nValA, nValB, nResult);
+#elif P_E01_EXAMPLE_15_02
 			Console.Write("\n수식 입력 (+, -, *, /) : ");
-			oTokens = Console.ReadLine().Split();
+			var oTokens = Console.ReadLine().Split();
 
-			nLhs = int.Parse(oTokens[0]);
-			nRhs = int.Parse(oTokens[2]);
+			int.TryParse(oTokens[0], out int nValA);
+			int.TryParse(oTokens[1], out int nValB);
 
-			char chOperator = char.Parse(oTokens[1]);
+			char.TryParse(oTokens[1], out char chOperator);
 			E01Calculator_15 oCalc = E01GetCalc_15(chOperator);
 
 			// 수식이 유효 할 경우
 			if(oCalc != null)
 			{
-				decimal dmResult = oCalc(nLhs, nRhs);
-				Console.WriteLine("{0} {1} {2} = {3}", nLhs, chOperator, nRhs, dmResult);
+				decimal dmResult = oCalc(nValA, nValB);
+				Console.WriteLine("{0} {1} {2} = {3}", nValA, chOperator, nValB, dmResult);
 			}
 			else
 			{
 				Console.WriteLine("잘못된 수식을 입력했습니다.");
 			}
-#elif P_E01_EXAMPLE_15_02
+#elif P_E01_EXAMPLE_15_03
 			var oRandom = new Random();
 
 			var oListValuesA = new List<int>();
@@ -153,8 +151,6 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			Console.WriteLine();
-#elif P_E01_EXAMPLE_15_03
-
 #endif // P_E01_EXAMPLE_15_01
 		}
 
@@ -162,14 +158,14 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 비교 델리게이트 */
 		private delegate int E01Compare_15(int a_nLhs, int a_nRhs);
 
-		/** 계산 델리게이트 */
-		private delegate decimal E01Calculator_15(int a_nLhs, int a_nRhs);
-
 		/** 값을 비교한다 */
-		private static int E01CompareInt_15(int a_nLhs, int a_nRhs)
+		private static int E01CompareVal_15(int a_nLhs, int a_nRhs)
 		{
 			return a_nLhs - a_nRhs;
 		}
+#elif P_E01_EXAMPLE_15_02
+		/** 계산 델리게이트 */
+		private delegate decimal E01Calculator_15(int a_nLhs, int a_nRhs);
 
 		/** 덧셈 결과를 반환한다 */
 		private static decimal E01GetVal_Sum_15(int a_nLhs, int a_nRhs)
@@ -215,7 +211,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			return null;
 		}
-#elif P_E01_EXAMPLE_15_02
+#elif P_E01_EXAMPLE_15_03
 		/** 비교 델리게이트 */
 		public delegate int E01Compare_15<T>(T a_tLhs, T a_tRhs);
 
@@ -230,8 +226,6 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		{
 			return a_nRhs.CompareTo(a_nLhs);
 		}
-#elif P_E01_EXAMPLE_15_03
-		
 #endif // P_E01_EXAMPLE_15_01
 	}
 }

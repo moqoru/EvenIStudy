@@ -1,7 +1,8 @@
 /*
  * 전처리기 명령어란?
- * - 전처리기 단계에서 실행되는 명령어로서 C# 코드로 작성 된 명령문을 컴파일하기 전에 코드를 
- * 한번 튜닝하는 역할을 수행한다.
+ * - 전처리 단계에서 실행되는 명령어로서 C# 으로 작성 된 명령문을 컴파일하기 전에 명령문을
+ * 튜닝하는 역할을 수행한다. (+ 즉, 전처리 단계를 거치고 나면 작성 된 명령문이
+ * 달라질 수 있다는 것을 의미한다.)
  * 
  * 전처리기 명령어는 모두 # 으로 시작하는 특징이 존재하며 C# 의 기능이 아니기 때문에 C# 과는 전혀 
  * 다른 문법을 지니고 있다.
@@ -12,8 +13,9 @@
  * - define
  * - if ~ else ~ endif
  * 
- * define 명령어는 특정 기호 (심볼) 를 정의하는 역할을 수행하며 해당 명령어로 정의 된 심볼을
- * 기반으로 조건문을 작성하면 특정 코드를 활성화하거나 비활성화하는 것이 가능하다.
+ * define 명령어란?
+ * - define 명령어는 특정 기호 (심볼) 를 정의하는 역할을 수행하며 해당 명령어로 정의 된 심볼을
+ * 기반으로 조건문을 작성하면 특정 명령문을 활성화하거나 비활성화하는 것이 가능하다.
  * 
  * Ex)
  * #if MOBILE_PLATFORM
@@ -21,19 +23,34 @@
  * #else
  *      // 기타 플랫폼 명령문
  * #endif
+ * 
+ * 위와 같이 전처리기 조건문을 활용하면 명령문을 특정 환경에서만 동작하도록 활성 및 비활성하는 것이
+ * 가능하다. (+ 즉, 멀티 플랫폼 환경에서 동작하는 명령문을 작성 할 때 특히 유용하다는 것을
+ * 알 수 있다.)
+ * 
+ * if ~ else ~ endif 명령어란?
+ * - 전처리 단계에서 처리되는 조건문을 의미한다. (+ 즉, 해당 명령어를 활용하면 특정 명령문을
+ * 컴파일 되지 않도록 비활성시키는 것이 가능하다.)
+ * 
+ * 단, 전처리기 조건문은 특정 조건에 해당하는 영역을 명시하기 위해서 반드시 endif 명령어로
+ * 종료되어야한다. (+ 즉, 전처리기 조건문에는 { } 기호를 사용하는 것이 불가능하다는 것을
+ * 알 수 있다.)
  */
 #define EXAMPLE
 #define PRACTICE
 #define SOLUTION
 
 /*
- * 네임스페이스란?
+ * 네임 스페이스란?
  * - C# 으로 작성 된 명령문을 구분하는 단위를 의미한다. (+ 즉, C# 은 C/C++ 과 달리 특정 파일에 
- * 존재하는 기능을 사용하기 위해서 해당 파일의 경로를 직접 명시하는 것이 아니라 네임스페이스 경로를 
+ * 존재하는 기능을 사용하기 위해서 해당 파일의 경로를 직접 명시하는 것이 아니라 네임 스페이스 경로를 
  * 명시해야한다.)
  * 
- * 따라서 네임스페이스는 C# 에서 특정 기능을 포함하기 위한 논리적인 경로를 의미한다는 것을 
+ * 따라서 네임 스페이스는 C# 에서 특정 기능을 포함하기 위한 논리적인 경로를 의미한다는 것을 
  * 알 수 있다.
+ * 
+ * 또한 네임 스페이스는 전역 공간 내에서 특정 영역을 생성하는 특징이 존재하기 때문에 관련 된 기능을 
+ * 특정 네임 스페이스 내부에 선언 및 정의함으로서 관리의 용이성을 향상 시키는 것이 가능하다.
  */
 namespace Example
 {
@@ -72,6 +89,7 @@ namespace Example
 		/** 프로그래밍 메인 메서드 */
 		private static void Main_Programming(string[] args)
 		{
+#if EXAMPLE
 			/*
 			 * C# 은 . (맴버 접근 연산자) 를 통해 특정 네임 스페이스나 클래스 하위에 접근하는 것이 
 			 * 가능하다. (+ 즉, 해당 연산자를 활용하면 특정 클래스 내부에 존재하는 메서드를 
@@ -83,9 +101,8 @@ namespace Example
 			 * 
 			 * 따라서 메서드를 활용하면 여러 기능들을 미리 만들어서 재사용하는 것이 가능하다.
 			 */
-#if EXAMPLE
-			_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
-			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
+			_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- * 제네릭이란?
+ * 제네릭 (Generic) 이란?
  * - 자료형을 명시하지 않고 메서드 or 클래스를 정의 할 수 있는 기능을 의미한다. (+ 즉, 
  * 제네릭을 활용하면 여러 자료형에 동작하는 메서드 or 클래스를 구현하는 것이 가능하다.)
  * 
@@ -21,7 +21,7 @@ using System.Threading.Tasks;
  * 하나의 메서드 or 클래스만을 제작하면 된다는 장점이 존재한다.
  * 
  * Ex)
- * void Swap(ref int a_nLhs, ref int a_nRhs)
+ * void Swap(ref int a_nValA, ref int a_nValB)
  * {
  *		// Do Something
  * }
@@ -33,7 +33,7 @@ using System.Threading.Tasks;
  * - 반환 형 + 메서드 이름 + 제네릭 형식 인자 + 매개 변수 + 메서드 몸체
  * 
  * Ex)
- * void Swap<T>(ref T a_rtLhs, ref T a_rtRhs)
+ * void Swap<T>(ref T a_tValA, ref T a_tValB)
  * {
  *		// Do Something
  * }
@@ -119,11 +119,11 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 #if P_E01_EXAMPLE_14_01
 		/** 값을 교환한다 */
-		private static void E01Swap_14<T>(ref T a_rtValA, ref T a_rtValB)
+		private static void E01Swap_14<T>(ref T a_tValA, ref T a_tValB)
 		{
-			T tTemp = a_rtValA;
-			a_rtValA = a_rtValB;
-			a_rtValB = tTemp;
+			T tTemp = a_tValA;
+			a_tValA = a_tValB;
+			a_tValB = tTemp;
 		}
 #elif P_E01_EXAMPLE_14_02
 		/*

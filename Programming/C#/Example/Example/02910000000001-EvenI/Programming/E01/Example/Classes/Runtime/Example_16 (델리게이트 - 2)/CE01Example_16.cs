@@ -23,8 +23,8 @@ using System.Threading.Tasks;
  * - 매개 변수 + 람다 몸체
  * 
  * Ex)
- * (int a_nLhs, int a_nRhs) => a_nLhs + a_nRhs					<- 람다식 (식 형식)
- * (int a_nLhs, int a_nRhs) => { return a_nLhs + a_nRhs; }		<- 람다문 (문 형식)
+ * (int a_nValA, int a_nValB) => a_nValA + a_nValB					<- 람다식 (식 형식)
+ * (int a_nValB, int a_nValB) => { return a_nValA + a_nValB; }		<- 람다문 (문 형식)
  * 
  * C# 람다는 식 형식과 문 형식 의 형태를 제공한다. 
  * 
@@ -32,13 +32,13 @@ using System.Threading.Tasks;
  * 지니는 복잡한 명령문을 지니는 람다 메서드를 구현 할 때 활용된다.
  * 
  * 또한 C# 람다는 입력으로 전달되는 자료형의 매개 변수를 생략하는 것이 가능하다.
- * 따라서 (a_nLhs, a_nRhs) 와 같은 매개 변수의 이름만 명시하는 것이 가능하다는 것을 알 수 있다.
+ * 따라서 a_nValA, a_nValB 와 같은 매개 변수의 이름만 명시하는 것이 가능하다는 것을 알 수 있다.
  * 
  * C# 무명 메서드 구현 방법
  * - delegate + 매개 변수 + 메서드 몸체
  * 
  * Ex)
- * delegate (int a_nLhs, int a_nRhs)
+ * delegate (int a_nValA, int a_nValB)
  * {
  *		// Do Something
  * }
