@@ -122,8 +122,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 */
 			int nVal_SumC = E01GetVal_Sum_09(a_nValB: 10, a_nValA: 20);
 
-			Console.WriteLine("{0}, {1}, {2}",
-				nVal_SumA, nVal_SumB, nVal_SumC);
+			Console.WriteLine("{0}, {1}, {2}", nVal_SumA, nVal_SumB, nVal_SumC);
 #endif // #if P_E01_EXAMPLE_09_01
 		}
 

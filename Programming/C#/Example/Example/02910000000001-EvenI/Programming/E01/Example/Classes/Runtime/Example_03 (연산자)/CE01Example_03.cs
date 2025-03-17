@@ -28,9 +28,6 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-			int nValA = 0;
-			int nValB = 0;
-
 			/*
              * Console.ReadLine 메서드는 콘솔 창으로부터 데이터를 입력받는 역할을 수행한다.
              * 
@@ -70,16 +67,17 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
              * 가능하다.
              * 
              * Ex)
-             * bool bIsResult = int.TryParse("A", out int nVal);
+             * int nValA = int.Parse("A");
+             * bool bIsResult = int.TryParse("A", out int nValB);
              * 
-             * 위의 경우 문자열 데이터를 정수로 변환할 수 없기 때문에 결과 값으로 거짓이 반환된다는 
-             * 것을 알 수 있다.
+             * 위의 경우 문자열 데이터를 정수로 변환하는 것이 불가능하기 때문에 Parse 메서드에서
+             * 예외가 발생한다는 것을 알 수 있다.
+             * 
+             * 반면 TryParse 메서드는 변환 성공 여부를 메서드의 반환 값으로 돌려주기 때문에
+             * Parse 메서드에 비해서 좀 더 안전하게 명령문을 작성하는 것이 가능하다.
              */
-			int.TryParse(oTokens[0], out nValA);
-			int.TryParse(oTokens[1], out nValB);
-
-			//nValA = int.Parse(oTokens[0]);
-			//nValB = int.Parse(oTokens[1]);
+			int.TryParse(oTokens[0], out int nValA);
+			int.TryParse(oTokens[1], out int nValB);
 
 			/*
              * 산술 연산자 결과 값의 자료형은 피연산자의 자료형을 따라가기 때문에 나눗셈 연산자와 

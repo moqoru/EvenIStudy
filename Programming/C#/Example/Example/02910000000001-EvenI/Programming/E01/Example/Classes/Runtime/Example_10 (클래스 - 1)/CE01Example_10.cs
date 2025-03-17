@@ -59,32 +59,32 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 것이 가능하다.)
 			 */
 			CE01Character_10 oCharacterA = new CE01Character_10();
-			oCharacterA.m_nLV = 1;
-			oCharacterA.m_nHP = 25;
-			oCharacterA.m_nATK = 5;
+			oCharacterA.m_nLv = 1;
+			oCharacterA.m_nHp = 25;
+			oCharacterA.m_nAtk = 5;
 
 			CE01Character_10 oCharacterB = new CE01Character_10();
-			oCharacterB.m_nLV = 20;
-			oCharacterB.m_nHP = 250;
-			oCharacterB.m_nATK = 100;
+			oCharacterB.m_nLv = 20;
+			oCharacterB.m_nHp = 250;
+			oCharacterB.m_nAtk = 100;
 
-			Console.WriteLine("=====> 캐릭터 - A <=====");
+			Console.WriteLine("=====> 캐릭터 정보 A <=====");
 			oCharacterA.ShowInfo();
 
-			Console.WriteLine("\n=====> 캐릭터 - B <=====");
+			Console.WriteLine("\n=====> 캐릭터 정보 B <=====");
 			oCharacterB.ShowInfo();
 #elif P_E01_EXAMPLE_10_02
 			CE01Character_10 oCharacterA = new CE01Character_10();
-			oCharacterA.m_nLV = 1;
-			oCharacterA.m_nHP = 25;
-			oCharacterA.m_nATK = 5;
+			oCharacterA.m_nLv = 1;
+			oCharacterA.m_nHp = 25;
+			oCharacterA.m_nAtk = 5;
 
 			CE01Character_10 oCharacterB = new CE01Character_10(20, 250, 100);
 
-			Console.WriteLine("=====> 캐릭터 - A <=====");
+			Console.WriteLine("=====> 캐릭터 정보 A <=====");
 			oCharacterA.ShowInfo();
 
-			Console.WriteLine("\n=====> 캐릭터 - B <=====");
+			Console.WriteLine("\n=====> 캐릭터 정보 B <=====");
 			oCharacterB.ShowInfo();
 #elif P_E01_EXAMPLE_10_03
 			/*
@@ -92,16 +92,16 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 것이 가능하다.
 			 */
 			CE01Character_10 oCharacterA = new CE01Character_10();
-			oCharacterA.SetLV(1);
-			oCharacterA.SetHP(25);
-			oCharacterA.SetATK(5);
+			oCharacterA.SetLv(1);
+			oCharacterA.SetHp(25);
+			oCharacterA.SetAtk(5);
 
 			CE01Character_10 oCharacterB = new CE01Character_10(20, 250, 100);
 
-			Console.WriteLine("=====> 캐릭터 - A <=====");
+			Console.WriteLine("=====> 캐릭터 정보 A <=====");
 			oCharacterA.ShowInfo();
 
-			Console.WriteLine("\n=====> 캐릭터 - B <=====");
+			Console.WriteLine("\n=====> 캐릭터 정보 B <=====");
 			oCharacterB.ShowInfo();
 #endif
 		}
@@ -112,9 +112,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 */
 		private class CE01Character_10
 		{
-			public int m_nLV = 0;
-			public int m_nHP = 0;
-			public int m_nATK = 0;
+			public int m_nLv = 0;
+			public int m_nHp = 0;
+			public int m_nAtk = 0;
 
 			/** 정보를 출력한다 */
 			public void ShowInfo()
@@ -128,9 +128,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				 * 멤버라는 것을 알 수 있다. (+ 즉, 어떤 객체의 멤버 메서드를 호출하는지에 따라 
 				 * 접근하는 멤버가 다르다는 것을 의미한다.)
 				 */
-				Console.WriteLine("LV : {0}", m_nLV);
-				Console.WriteLine("HP : {0}", m_nHP);
-				Console.WriteLine("ATK : {0}", m_nATK);
+				Console.WriteLine("레벨 : {0}", m_nLv);
+				Console.WriteLine("체력 : {0}", m_nHp);
+				Console.WriteLine("공격력 : {0}", m_nAtk);
 			}
 		}
 #elif P_E01_EXAMPLE_10_02
@@ -139,9 +139,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 */
 		private class CE01Character_10
 		{
-			public int m_nLV = 0;
-			public int m_nHP = 0;
-			public int m_nATK = 0;
+			public int m_nLv = 0;
+			public int m_nHp = 0;
+			public int m_nAtk = 0;
 
 			/*
 			 * 생성자란?
@@ -185,19 +185,19 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			/** 생성자 */
-			public CE01Character_10(int a_nLV, int a_nHP, int a_nATK)
+			public CE01Character_10(int a_nLv, int a_nHp, int a_nAtk)
 			{
-				m_nLV = a_nLV;
-				m_nHP = a_nHP;
-				m_nATK = a_nATK;
+				this.m_nLv = a_nLv;
+				this.m_nHp = a_nHp;
+				this.m_nAtk = a_nAtk;
 			}
 
 			/** 정보를 출력한다 */
 			public void ShowInfo()
 			{
-				Console.WriteLine("LV : {0}", m_nLV);
-				Console.WriteLine("HP : {0}", m_nHP);
-				Console.WriteLine("ATK : {0}", m_nATK);
+				Console.WriteLine("레벨 : {0}", m_nLv);
+				Console.WriteLine("체력 : {0}", m_nHp);
+				Console.WriteLine("공격력 : {0}", m_nAtk);
 			}
 		}
 #elif P_E01_EXAMPLE_10_03
@@ -220,12 +220,12 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * CSomeClass oSomeObj = new CSomeClass();
 		 * oSomeObj.m_nVal = 0;
 		 * 
-		 * 위의 경우 m_nVal 변수는 private 수준으로 지정 되어있기 때문에 클래스 외부에서 접근이 
+		 * 위의 경우 m_nVal 변수는 Private 수준으로 지정 되어있기 때문에 클래스 외부에서 접근이 
 		 * 불가능하다는 것을 알 수 있다. (+ 즉, 컴파일 에러가 발생한다.)
 		 * 
-		 * 일반적으로 멤버 변수는 private 수준으로 보호하는 것이 관례이며 만약 외부에서 해당 변수에 
+		 * 일반적으로 멤버 변수는 Private 수준으로 보호하는 것이 관례이며 만약 외부에서 해당 변수에 
 		 * 접근 할 필요가 있을 경우 접근자 메서드를 제공해야한다. (+ 즉, 클래스 외부에서는 
-		 * 접근자 메서드를 통해 private 수준으로 보호되고 있는 멤버에 간접적으로 접근하는 것이 
+		 * 접근자 메서드를 통해 Private 수준으로 보호되고 있는 멤버에 간접적으로 접근하는 것이 
 		 * 가능하다.)
 		 */
 		/**
@@ -233,9 +233,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 */
 		private class CE01Character_10
 		{
-			private int m_nLV = 0;
-			private int m_nHP = 0;
-			private int m_nATK = 0;
+			private int m_nLv = 0;
+			private int m_nHp = 0;
+			private int m_nAtk = 0;
 
 			/** 생성자 */
 			public CE01Character_10() : this(0, 0, 0)
@@ -244,55 +244,55 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			/** 생성자 */
-			public CE01Character_10(int a_nLV, int a_nHP, int a_nATK)
+			public CE01Character_10(int a_nLv, int a_nHp, int a_nAtk)
 			{
-				m_nLV = a_nLV;
-				m_nHP = a_nHP;
-				m_nATK = a_nATK;
+				this.m_nLv = a_nLv;
+				this.m_nHp = a_nHp;
+				this.m_nAtk = a_nAtk;
 			}
 
 			/** 레벨을 반환한다 */
-			public int GetLV()
+			public int GetLv()
 			{
-				return m_nLV;
+				return m_nLv;
 			}
 
 			/** 체력을 반환한다 */
-			public int GetHP()
+			public int GetHp()
 			{
-				return m_nHP;
+				return m_nHp;
 			}
 
 			/** 공격력을 반환한다 */
-			public int GetATK()
+			public int GetAtk()
 			{
-				return m_nATK;
+				return m_nAtk;
 			}
 
 			/** 레벨을 변경한다 */
-			public void SetLV(int a_nLV)
+			public void SetLv(int a_nLv)
 			{
-				m_nLV = a_nLV;
+				m_nLv = a_nLv;
 			}
 
 			/** 체력을 변경한다 */
-			public void SetHP(int a_nHP)
+			public void SetHp(int a_nHp)
 			{
-				m_nHP = a_nHP;
+				m_nHp = a_nHp;
 			}
 
 			/** 공격력을 변경한다 */
-			public void SetATK(int a_nATK)
+			public void SetAtk(int a_nAtk)
 			{
-				m_nATK = a_nATK;
+				m_nAtk = a_nAtk;
 			}
 
 			/** 정보를 출력한다 */
 			public void ShowInfo()
 			{
-				Console.WriteLine("LV : {0}", m_nLV);
-				Console.WriteLine("HP : {0}", m_nHP);
-				Console.WriteLine("ATK : {0}", m_nATK);
+				Console.WriteLine("레벨 : {0}", m_nLv);
+				Console.WriteLine("체력 : {0}", m_nHp);
+				Console.WriteLine("공격력 : {0}", m_nAtk);
 			}
 		}
 #endif

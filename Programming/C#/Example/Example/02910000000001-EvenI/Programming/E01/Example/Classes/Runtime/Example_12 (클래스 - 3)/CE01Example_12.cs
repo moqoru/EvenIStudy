@@ -206,8 +206,8 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/** 생성자 */
 			public CE01Base_12(int a_nVal, float a_fVal)
 			{
-				m_nVal = a_nVal;
-				m_fVal = a_fVal;
+				this.m_nVal = a_nVal;
+				this.m_fVal = a_fVal;
 			}
 
 			/** 정보를 출력한다 */
@@ -243,7 +243,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			public CE01Derived_12(int a_nVal, 
 				float a_fVal, string a_oStr) : base(a_nVal, a_fVal)
 			{
-				m_oStr = a_oStr;
+				this.m_oStr = a_oStr;
 			}
 
 			/** 정보를 출력한다 */
@@ -271,8 +271,8 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/** 생성자 */
 			public CE01Base_12(int a_nVal, float a_fVal)
 			{
-				m_nVal = a_nVal;
-				m_fVal = a_fVal;
+				this.m_nVal = a_nVal;
+				this.m_fVal = a_fVal;
 			}
 
 			/*
@@ -308,7 +308,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			public CE01Derived_12(int a_nVal,
 				float a_fVal, string a_oStr) : base(a_nVal, a_fVal)
 			{
-				m_oStr = a_oStr;
+				this.m_oStr = a_oStr;
 			}
 
 			/** 정보를 출력한다 */

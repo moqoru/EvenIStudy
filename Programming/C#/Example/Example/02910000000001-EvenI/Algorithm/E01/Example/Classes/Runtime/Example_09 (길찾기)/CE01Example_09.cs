@@ -294,7 +294,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 
 				for(int i = 0; i < oListEdges.NumValues; ++i)
 				{
-					int nVertex_To = oListEdges[i];
+					int nVertex_To = a_oGraph_Matrix.FindVertexAt(oListEdges[i]);
 					var oVertex_To = a_oGraph_Matrix.ListVertices[nVertex_To];
 
 					int nCost_To = oInfo_FromPath.m_nCost +
@@ -339,7 +339,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 
 				for(int i = 0; i < oListEdges.NumValues; ++i)
 				{
-					int nVertex_To = oListEdges[i];
+					int nVertex_To = a_oGraph_Matrix.FindVertexAt(oListEdges[i]);
 					var oVertex_To = a_oGraph_Matrix.ListVertices[nVertex_To];
 
 					// 탐색이 불가능 할 경우

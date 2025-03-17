@@ -21,7 +21,7 @@ using System.Threading.Tasks;
  * 하나의 메서드 or 클래스만을 제작하면 된다는 장점이 존재한다.
  * 
  * Ex)
- * void Swap(ref int a_nValA, ref int a_nValB)
+ * void Swap(ref int a_rnValA, ref int a_rnValB)
  * {
  *		// Do Something
  * }
@@ -33,7 +33,7 @@ using System.Threading.Tasks;
  * - 반환 형 + 메서드 이름 + 제네릭 형식 인자 + 매개 변수 + 메서드 몸체
  * 
  * Ex)
- * void Swap<T>(ref T a_tValA, ref T a_tValB)
+ * void Swap<T>(ref T a_rtValA, ref T a_rtValB)
  * {
  *		// Do Something
  * }
@@ -119,11 +119,11 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 #if P_E01_EXAMPLE_14_01
 		/** 값을 교환한다 */
-		private static void E01Swap_14<T>(ref T a_tValA, ref T a_tValB)
+		private static void E01Swap_14<T>(ref T a_rtValA, ref T a_rtValB)
 		{
-			T tTemp = a_tValA;
-			a_tValA = a_tValB;
-			a_tValB = tTemp;
+			T tTemp = a_rtValA;
+			a_rtValA = a_rtValB;
+			a_rtValB = tTemp;
 		}
 #elif P_E01_EXAMPLE_14_02
 		/*
@@ -243,7 +243,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				var oWStream_File = File.Open(a_oPath_File,
 					FileMode.Create, FileAccess.Write);
 
-				m_oWriter = new StreamWriter(oWStream_File);
+				this.m_oWriter = new StreamWriter(oWStream_File);
 			}
 
 			/** 문자열을 출력한다 */

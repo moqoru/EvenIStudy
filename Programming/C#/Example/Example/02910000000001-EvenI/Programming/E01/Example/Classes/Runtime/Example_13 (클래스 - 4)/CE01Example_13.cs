@@ -144,7 +144,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		public static void Start(string[] args)
 		{
 #if P_E01_EXAMPLE_13_01
-			CBase oDerivedA = new CE01Derived_13();
+			CE01Base_13 oDerivedA = new CE01Derived_13();
 			oDerivedA.m_nVal = 10;
 
 			CE01Derived_13 oDerivedB = new CE01Derived_13();
@@ -152,10 +152,10 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			oDerivedB.m_fVal = 3.14f;
 
 			/*
-			 * 아래와 같이 CBase 클래스는 추상 클래스이기 때문에 new 키워드를 통해 직접적으로 
+			 * 아래와 같이 CE01Base_13 클래스는 추상 클래스이기 때문에 new 키워드를 통해 직접적으로 
 			 * 객체화 시키는 것은 불가능하다는 것을 알 수 있다. (+ 즉, 컴파일 에러가 발생한다.)
 			 */
-			//CBase oBase = new CBase();
+			//CE01Base_13 oBase = new CE01Base_13();
 
 			Console.WriteLine("=====> 자식 클래스 - A <=====");
 			oDerivedA.ShowInfo();
@@ -194,7 +194,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/**
 		 * 부모 클래스
 		 */
-		private abstract class CBase
+		private abstract class CE01Base_13
 		{
 			public int m_nVal = 0;
 
@@ -218,7 +218,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/**
 		 * 자식 클래스
 		 */
-		private class CE01Derived_13 : CBase
+		private class CE01Derived_13 : CE01Base_13
 		{
 			public float m_fVal = 0.0f;
 

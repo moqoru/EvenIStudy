@@ -56,25 +56,25 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			Console.WriteLine("=====> 리스트 요소 - 정렬 전 <=====");
 			E01PrintValues_03(oListValues);
 
-			E01SortValues_03(oListValues, E01CompareByAscending_03);
+			E01SortValues_03(oListValues, E01Compare_ByAscending_03);
 
 			Console.WriteLine("\n=====> 리스트 요소 - 정렬 후 (오름차순) <=====");
 			E01PrintValues_03(oListValues);
 
-			E01SortValues_03(oListValues, E01CompareByDescending_03);
+			E01SortValues_03(oListValues, E01Compare_ByDescending_03);
 
 			Console.WriteLine("\n=====> 리스트 요소 - 정렬 후 (내림차순) <=====");
 			E01PrintValues_03(oListValues);
 		}
 
 		/** 오름차순으로 비교한다 */
-		private static int E01CompareByAscending_03(int a_nLhs, int a_nRhs)
+		private static int E01Compare_ByAscending_03(int a_nLhs, int a_nRhs)
 		{
 			return a_nLhs - a_nRhs;
 		}
 
 		/** 내림차순으로 비교한다 */
-		private static int E01CompareByDescending_03(int a_nLhs, int a_nRhs)
+		private static int E01Compare_ByDescending_03(int a_nLhs, int a_nRhs)
 		{
 			return a_nRhs - a_nLhs;
 		}

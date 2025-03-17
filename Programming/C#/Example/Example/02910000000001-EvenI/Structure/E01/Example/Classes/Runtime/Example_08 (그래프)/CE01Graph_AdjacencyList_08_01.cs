@@ -188,13 +188,13 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			switch(a_eOrder)
 			{
 				case EOrder.DEPTH_FIRST:
-					this.EnumerateByOrder_DepthFirst(a_tKey_Start,
+					this.Enumerate_ByDepthFirst(a_tKey_Start,
 						a_oCallback, oListKeys_Visit);
 
 					break;
 
 				case EOrder.BREADTH_FIRST:
-					this.EnumerateByOrder_BreadthFirst(a_tKey_Start,
+					this.Enumerate_ByBreadthFirst(a_tKey_Start,
 						a_oCallback, oListKeys_Visit);
 
 					break;
@@ -240,7 +240,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 		}
 
 		/** 값을 순회한다 */
-		private void EnumerateByOrder_DepthFirst(TKey a_tKey,
+		private void Enumerate_ByDepthFirst(TKey a_tKey,
 			Action<TKey, TVal> a_oCallback, List<TKey> a_oOutListKeys_Visit)
 		{
 			var oVertex = this.FindVertex(a_tKey);
@@ -256,13 +256,13 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 					continue;
 				}
 
-				this.EnumerateByOrder_DepthFirst(oVertex.m_oListEdges[i].m_tTo,
+				this.Enumerate_ByDepthFirst(oVertex.m_oListEdges[i].m_tTo,
 					a_oCallback, a_oOutListKeys_Visit);
 			}
 		}
 
 		/** 값을 순회한다 */
-		private void EnumerateByOrder_BreadthFirst(TKey a_tKey,
+		private void Enumerate_ByBreadthFirst(TKey a_tKey,
 			Action<TKey, TVal> a_oCallback, List<TKey> a_oOutListKeys_Visit)
 		{
 			var oQueueKeys = new CE01Queue_04<TKey>();

@@ -28,7 +28,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			oCharacter.ATK = 5;
 			oCharacter.Name = "캐릭터";
 
-			Console.WriteLine("=====> 캐릭터 <=====");
+			Console.WriteLine("=====> 캐릭터 정보 <=====");
 			oCharacter.ShowInfo();
 #elif P_E01_EXAMPLE_11_02
 			CE01Array_11 oValues = new CE01Array_11(5);
@@ -125,9 +125,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 */
 		private class CE01Character_11
 		{
-			private int m_nLV = 0;
-			private int m_nHP = 0;
-			private int m_nATK = 0;
+			private int m_nLv = 0;
+			private int m_nHp = 0;
+			private int m_nAtk = 0;
 
 			/*
 			 * 자동 구현 프로퍼티란?
@@ -145,11 +145,11 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			{
 				get
 				{
-					return m_nLV;
+					return m_nLv;
 				}
 				set
 				{
-					m_nLV = value;
+					m_nLv = value;
 				}
 			}
 
@@ -157,11 +157,11 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			{
 				get
 				{
-					return m_nHP;
+					return m_nHp;
 				}
 				set
 				{
-					m_nHP = value;
+					m_nHp = value;
 				}
 			}
 
@@ -169,20 +169,20 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			{
 				get
 				{
-					return m_nATK;
+					return m_nAtk;
 				}
 				set
 				{
-					m_nATK = value;
+					m_nAtk = value;
 				}
 			}
 
 			/** 정보를 출력한다 */
 			public void ShowInfo()
 			{
-				Console.WriteLine("LV : {0}", this.LV);
-				Console.WriteLine("HP : {0}", this.HP);
-				Console.WriteLine("ATK : {0}", this.ATK);
+				Console.WriteLine("레벨 : {0}", this.LV);
+				Console.WriteLine("체력 : {0}", this.HP);
+				Console.WriteLine("공격력 : {0}", this.ATK);
 				Console.WriteLine("Name : {0}", this.Name);
 			}
 		}
@@ -198,7 +198,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/** 생성자 */
 			public CE01Array_11(int a_nSize)
 			{
-				m_oValues = new int[a_nSize];
+				this.m_oValues = new int[a_nSize];
 			}
 
 			/*

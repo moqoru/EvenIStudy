@@ -118,9 +118,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		{
 #if P_E01_EXAMPLE_18_01
 			STE01Character_18 stCharacter = new STE01Character_18();
-			stCharacter.m_nLV = 1;
-			stCharacter.m_nHP = 50;
-			stCharacter.m_nATK = 15;
+			stCharacter.m_nLv = 1;
+			stCharacter.m_nHp = 50;
+			stCharacter.m_nAtk = 15;
 
 			Console.WriteLine("=====> 캐릭터 정보 - 레벨 업 전 <=====");
 			E01ShowInfo_18(stCharacter);
@@ -141,9 +141,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 */
 		private struct STE01Character_18
 		{
-			public int m_nLV;
-			public int m_nHP;
-			public int m_nATK;
+			public int m_nLv;
+			public int m_nHp;
+			public int m_nAtk;
 		}
 
 		/** 레벨을 증가시킨다 */
@@ -155,18 +155,18 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 */
 			return new STE01Character_18()
 			{
-				m_nLV = a_stCharacter.m_nLV + 1,
-				m_nHP = a_stCharacter.m_nHP + 10,
-				m_nATK = a_stCharacter.m_nATK + 5
+				m_nLv = a_stCharacter.m_nLv + 1,
+				m_nHp = a_stCharacter.m_nHp + 10,
+				m_nAtk = a_stCharacter.m_nAtk + 5
 			};
 		}
 
 		/** 정보를 출력한다 */
 		private static void E01ShowInfo_18(STE01Character_18 a_stCharacter)
 		{
-			Console.WriteLine("레벨 : {0}", a_stCharacter.m_nLV);
-			Console.WriteLine("체력 : {0}", a_stCharacter.m_nHP);
-			Console.WriteLine("공격력 : {0}", a_stCharacter.m_nATK);
+			Console.WriteLine("레벨 : {0}", a_stCharacter.m_nLv);
+			Console.WriteLine("체력 : {0}", a_stCharacter.m_nHp);
+			Console.WriteLine("공격력 : {0}", a_stCharacter.m_nAtk);
 		}
 #elif P_E01_EXAMPLE_18_02
 		/**
