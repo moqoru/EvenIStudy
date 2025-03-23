@@ -92,7 +92,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 
 			var oTree_MinCostSpanning = E01CreateTree_MinCostSpanning_08(oGraph_List, 'A');
 
-			Console.WriteLine("=====> 최소 비용 신장 트리 요소 <=====");
+			Console.WriteLine("=====> 최소 비용 신장 트리 요소 - 프림 <=====");
 			E01PrintTree_MinCostSpanning_08(oTree_MinCostSpanning, 'A');
 #elif A_E01_EXAMPLE_08_02
 			var oRandom = new Random();
@@ -224,6 +224,9 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 				oTree_MinCostSpanning.AddEdge(stInfo_Edge.m_chFrom,
 					stInfo_Edge.m_chTo, stInfo_Edge.m_nCost);
 
+				oTree_MinCostSpanning.AddEdge(stInfo_Edge.m_chTo,
+					stInfo_Edge.m_chFrom, stInfo_Edge.m_nCost);
+
 				var oListEdges = a_oGraph_List.GetEdges(stInfo_Edge.m_chTo);
 
 				for(int i = 0; i < oListEdges.NumValues; ++i)
@@ -302,6 +305,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			{
 				var stInfo_Edge = oPQueueInfos_Edge.Dequeue();
 				oTree_MinCostSpanning.RemoveEdge(stInfo_Edge.m_chFrom, stInfo_Edge.m_chTo);
+				oTree_MinCostSpanning.RemoveEdge(stInfo_Edge.m_chTo, stInfo_Edge.m_chFrom);
 
 				bool bIsConnect = E01IsConnect_Vertex_08(oTree_MinCostSpanning,
 					stInfo_Edge.m_chFrom, stInfo_Edge.m_chTo);
@@ -311,6 +315,9 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 				{
 					oTree_MinCostSpanning.AddEdge(stInfo_Edge.m_chFrom,
 						stInfo_Edge.m_chTo, stInfo_Edge.m_nCost);
+
+					oTree_MinCostSpanning.AddEdge(stInfo_Edge.m_chTo,
+						stInfo_Edge.m_chFrom, stInfo_Edge.m_nCost);
 				}
 			}
 
