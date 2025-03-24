@@ -23,9 +23,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 아래와 같이 프로퍼티를 활용하면 변수를 다루듯이 명령문을 작성하는 것이 가능하다.
 			 */
 			CE01Character_11 oCharacter = new CE01Character_11();
-			oCharacter.LV = 1;
-			oCharacter.HP = 10;
-			oCharacter.ATK = 5;
+			oCharacter.Lv = 1;
+			oCharacter.Hp = 10;
+			oCharacter.Atk = 5;
 			oCharacter.Name = "캐릭터";
 
 			Console.WriteLine("=====> 캐릭터 정보 <=====");
@@ -141,7 +141,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 */
 			public string Name { get; set; } = string.Empty;
 
-			public int LV
+			public int Lv
 			{
 				get
 				{
@@ -153,7 +153,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				}
 			}
 
-			public int HP
+			public int Hp
 			{
 				get
 				{
@@ -165,7 +165,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				}
 			}
 
-			public int ATK
+			public int Atk
 			{
 				get
 				{
@@ -180,9 +180,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/** 정보를 출력한다 */
 			public void ShowInfo()
 			{
-				Console.WriteLine("레벨 : {0}", this.LV);
-				Console.WriteLine("체력 : {0}", this.HP);
-				Console.WriteLine("공격력 : {0}", this.ATK);
+				Console.WriteLine("레벨 : {0}", this.Lv);
+				Console.WriteLine("체력 : {0}", this.Hp);
+				Console.WriteLine("공격력 : {0}", this.Atk);
 				Console.WriteLine("Name : {0}", this.Name);
 			}
 		}
