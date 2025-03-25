@@ -80,7 +80,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 	/**
 	 * Example 12
 	 */
-	class CE01Example_12
+	internal class CE01Example_12
 	{
 		/** 초기화 */
 		public static void Start(string[] args)

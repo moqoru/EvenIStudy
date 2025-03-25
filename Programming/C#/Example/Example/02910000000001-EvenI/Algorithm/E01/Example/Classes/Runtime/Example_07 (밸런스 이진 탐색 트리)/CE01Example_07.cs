@@ -138,7 +138,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 	/**
 	 * Example 7
 	 */
-	class CE01Example_07
+	internal class CE01Example_07
 	{
 		/** 초기화 */
 		public static void Start(string[] args)
