@@ -35,17 +35,17 @@ using System.Threading.Tasks;
  * 가능하면 고려하지 않는 것을 추천한다.
  * 
  * Ex)
- * class CE01Base_12
+ * class CBase
  * {
  *		// Do Something
  * }
  * 
- * class CE01Derived_12 : CE01Base_12
+ * class CDerived : CBase
  * {
  *		// Do Something
  * }
  * 
- * 위와 CE01Derived_12 클래스는 CE01Base_12 클래스를 상속하고 있기 때문에 해당 클래스는 CE01Base_12 클래스에 존재하는 
+ * 위와 CDerived 클래스는 CBase 클래스를 상속하고 있기 때문에 해당 클래스는 CBase 클래스에 존재하는 
  * 멤버를 사용하는 것이 가능하다.
  * 
  * 단, 상속은 단방향이기 때문에 두 클래스가 서로를 상속하는 것이 불가능하다. (+ 즉, 양방향 상속은 
@@ -58,17 +58,17 @@ using System.Threading.Tasks;
  * C# 은 상속을 통해서 다형성을 흉내내는 것이 가능하다.
  * 
  * Ex)
- * class CE01Base_12
+ * class CBase
  * {
  *		// Do Something
  * }
  * 
- * class CE01Derived_12 : CE01Base_12
+ * class CDerived : CBase
  * {
  *		// Do Something
  * }
  * 
- * CE01Base_12 oBase = new CE01Derived_12();
+ * CBase oBase = new CDerived();
  * 
  * 위와 같이 자식 클래스를 통해서 생성 된 객체는 부모 클래스 형으로 참조하는 것이 가능하다. (+ 즉, 
  * 자식 객체를 부모 객체로 인지하고 있다는 것을 알 수 있다.)
