@@ -82,7 +82,7 @@ namespace Example
 		 * 종료된다는 것을 알 수 있다.)
 		 */
 		/** 메인 메서드 */
-		public static void Main(string[] args)
+		static void Main(string[] args)
 		{
 			Program.Main_Programming(args);
 			//Program.Main_Structure(args);
