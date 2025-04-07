@@ -33,21 +33,21 @@ using System.Threading.Tasks;
  * 
  * C# 값 형식 자료형 종류
  * // 정수
- * - byte or sbyte : 1 바이트
- * - short or ushort : 2 바이트
- * - int or uint : 4 바이트
- * - long or ulong : 8 바이트
+ * - byte or sbyte : 1 Byte
+ * - short or ushort : 2 Byte
+ * - int or uint : 4 Byte
+ * - long or ulong : 8 Byte
  * 
  * // 실수
- * - float : 4 바이트 (부동 소수점)
- * - double : 8 바이트 (부동 소수점)
- * - decimal : 16 바이트 (고정 소수점)
+ * - float : 4 Byte (부동 소수점)
+ * - double : 8 Byte (부동 소수점)
+ * - decimal : 16 Byte (고정 소수점)
  * 
  * // 논리
- * - bool : 1 바이트
+ * - bool : 1 Byte
  * 
  * // 문자
- * - char : 2 바이트
+ * - char : 2 Byte
  * 
  * // 기타
  * - enum
