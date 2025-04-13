@@ -23,8 +23,8 @@ using System.Threading.Tasks;
  * - 매개 변수 + 람다 몸체
  * 
  * Ex)
- * (int a_nValA, int a_nValB) => a_nValA + a_nValB					<- 람다식 (식 형식)
- * (int a_nValB, int a_nValB) => { return a_nValA + a_nValB; }		<- 람다문 (문 형식)
+ * (int a_nValA, int a_nValB) => a_nValA + a_nValB						<- 람다식 (식 형식)
+ * (int a_nValB, int a_nValB) => { return a_nValA + a_nValB; }			<- 람다문 (문 형식)
  * 
  * C# 람다는 식 형식과 문 형식 의 형태를 제공한다. 
  * 
@@ -48,12 +48,12 @@ using System.Threading.Tasks;
  * 사용하는 것이 일반적이다.)
  * 
  * C# 이 지원하는 델리게이트 종류
- * - Action		<- 반환 값이 없는 메서드에 대한 델리게이트
- * - Func		<- 반환 값이 존재하는 메서드에 대한 델리게이트
+ * - Action			<- 반환 값이 없는 메서드에 대한 델리게이트
+ * - Func			<- 반환 값이 존재하는 메서드에 대한 델리게이트
  * 
  * Ex)
- * Action<int, float>		<- 정수 1 개, 실수 1 개를 입력으로 받는 메서드에 대한 델리게이트
- * Func<int, float>			<- 정수 1 개를 입력으로 받고 실수를 출력하는 메서드에 대한 델리게이트
+ * Action<int, float>			<- 정수 1 개, 실수 1 개를 입력으로 받는 메서드에 대한 델리게이트
+ * Func<int, float>				<- 정수 1 개를 입력으로 받고 실수를 출력하는 메서드에 대한 델리게이트
  */
 namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16
 {

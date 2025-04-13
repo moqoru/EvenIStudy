@@ -18,10 +18,10 @@ using System.Threading.Tasks;
  * 프로그래밍의 메서드 (함수) 는 수학의 함수와 조금 다르다는 것을 알 수 있다.)
  * 
  * C# 메서드 유형
- * - 입력 O, 출력 O		<- int SomeMethod(int a_nVal);
- * - 입력 O, 출력 X		<- void SomeMethod(int a_nVal);
- * - 입력 X, 출력 O		<- int SomeMethod();
- * - 입력 X, 출력 X		<- void SomeMethod();
+ * - 입력 O, 출력 O			<- int SomeMethod(int a_nVal);
+ * - 입력 O, 출력 X			<- void SomeMethod(int a_nVal);
+ * - 입력 X, 출력 O			<- int SomeMethod();
+ * - 입력 X, 출력 X			<- void SomeMethod();
  * 
  * 위와 같이 메서드는 입력 데이터와 출력 데이터의 존재 여부에 따라 크게 4 가지 유형으로 구분된다는 
  * 것을 알 수 있다.

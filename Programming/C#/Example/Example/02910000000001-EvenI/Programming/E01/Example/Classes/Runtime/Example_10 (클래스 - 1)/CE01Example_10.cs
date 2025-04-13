@@ -207,9 +207,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * 특정 멤버에 접근 할 수 있는 범위를 제한하는 것이 가능하다.)
 		 * 
 		 * C# 주요 접근 제어 지시자 종류
-		 * - public			<- 클래스 내부와 외부에서 모두 접근 허용
-		 * - protected		<- 클래스 내부와 자식 클래스에서 접근 허용
-		 * - private		<- 클래스 내부에서 접근 허용
+		 * - public				<- 클래스 내부와 외부에서 모두 접근 허용
+		 * - protected			<- 클래스 내부와 자식 클래스에서 접근 허용
+		 * - private			<- 클래스 내부에서 접근 허용
 		 * 
 		 * Ex)
 		 * class CSomeClass

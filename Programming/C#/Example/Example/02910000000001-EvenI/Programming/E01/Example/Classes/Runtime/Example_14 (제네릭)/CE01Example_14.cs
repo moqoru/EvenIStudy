@@ -128,9 +128,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #elif P_E01_EXAMPLE_14_02
 		/*
 		 * C# 제네릭 형식 인자 제한 방법
-		 * - where T : class			<- 참조 형식 자료형으로 제한
-		 * - where T : struct			<- 값 형식 자료형으로 제한
-		 * - where T : SomeClass		<- 해당 클래스를 상속하는 자료형으로 제한
+		 * - where T : class				<- 참조 형식 자료형으로 제한
+		 * - where T : struct				<- 값 형식 자료형으로 제한
+		 * - where T : SomeClass			<- 해당 클래스를 상속하는 자료형으로 제한
 		 * - where T : SomeInterface	<- 해당 인터페이스를 따르는 자료형으로 제한
 		 * 
 		 * C# 제네릭 메서드 or 제네릭 클래스는 기본적으로 모든 자료형에 동작하도록 정의 될 필요가 
