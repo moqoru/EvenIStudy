@@ -41,7 +41,7 @@ using System.Threading.Tasks;
  * - static + class + 클래스 + 클래스 멤버
  * 
  * Ex)
- * static class CSomeStaticClass
+ * static class CSomeClass_Static
  * {
  *		// Do Something
  * }
@@ -61,9 +61,9 @@ using System.Threading.Tasks;
  * 확장 메서드를 통한 기능의 확장이 불가능하다는 것을 알 수 있다.)
  * 
  * Ex)
- * static class CSomeStaticClass
+ * static class CSomeClass_Static
  * {
- *		static void SomeExtensionMethod(this int a_oSender)
+ *		static void SomeMethod_Extension(this int a_oSender)
  *		{
  *				// Do Something
  *		}
@@ -77,7 +77,7 @@ using System.Threading.Tasks;
  * 
  * Ex)
  * int nVal = 0;
- * nVal.SomeExtensionMethod();
+ * nVal.SomeMethod_Extension();
  * 
  * 위와 같이 확장 메서드는 . (멤버 지정 연산자) 를 통해 호출하는 것이 가능하다.
  * 
