@@ -75,7 +75,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 
 				for(j = 0; j < a_oPattern.Length; ++j)
 				{
-					// 탐색이 불가ㅏ능 할 경우
+					// 탐색이 불가능 할 경우
 					if(a_oStr[i + j] != a_oPattern[j])
 					{
 						break;
