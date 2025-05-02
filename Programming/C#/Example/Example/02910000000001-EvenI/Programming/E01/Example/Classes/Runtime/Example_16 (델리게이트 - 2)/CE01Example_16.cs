@@ -74,7 +74,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oListValues.Add(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 리스트 요소 <=====");
+			Console.WriteLine("=====> 리스트 <=====");
 
 			for(int i = 0; i < oListValues.Count; ++i)
 			{
@@ -112,7 +112,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oListValues.Add(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 리스트 요소 <=====");
+			Console.WriteLine("=====> 리스트 <=====");
 
 			for(int i = 0; i < oListValues.Count; ++i)
 			{

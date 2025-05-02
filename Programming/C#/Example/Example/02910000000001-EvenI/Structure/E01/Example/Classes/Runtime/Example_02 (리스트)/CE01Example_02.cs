@@ -62,17 +62,17 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 				oListValues.AddVal(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 리스트 요소 <=====");
+			Console.WriteLine("=====> 리스트 <=====");
 			E01PrintValues_02(oListValues);
 
 			oListValues.InsertVal(0, 100);
 
-			Console.WriteLine("\n=====> 리스트 요소 - 추가 후 <=====");
+			Console.WriteLine("\n=====> 리스트 - 추가 후 <=====");
 			E01PrintValues_02(oListValues);
 
 			oListValues.RemoveVal(100);
 
-			Console.WriteLine("\n=====> 리스트 요소 - 제거 후 <=====");
+			Console.WriteLine("\n=====> 리스트 - 제거 후 <=====");
 			E01PrintValues_02(oListValues);
 #elif S_E01_EXAMPLE_02_02
 			var oRandom = new Random();
@@ -83,17 +83,17 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 				oListValues.AddVal(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 리스트 요소 <=====");
+			Console.WriteLine("=====> 리스트 <=====");
 			E01PrintValues_02(oListValues);
 
 			oListValues.InsertVal(0, 100);
 
-			Console.WriteLine("\n=====> 리스트 요소 - 추가 후 <=====");
+			Console.WriteLine("\n=====> 리스트 - 추가 후 <=====");
 			E01PrintValues_02(oListValues);
 
 			oListValues.RemoveVal(100);
 
-			Console.WriteLine("\n=====> 리스트 요소 - 제거 후 <=====");
+			Console.WriteLine("\n=====> 리스트 - 제거 후 <=====");
 			E01PrintValues_02(oListValues);
 #endif // #if S_E01_EXAMPLE_02_01
 		}

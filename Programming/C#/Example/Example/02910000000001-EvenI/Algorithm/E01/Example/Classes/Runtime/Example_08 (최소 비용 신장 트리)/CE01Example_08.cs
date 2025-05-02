@@ -92,7 +92,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 
 			var oTree_MinCostSpanning = E01CreateTree_MinCostSpanning_08(oGraph_List, 'A');
 
-			Console.WriteLine("=====> 최소 비용 신장 트리 요소 - 프림 <=====");
+			Console.WriteLine("=====> 최소 비용 신장 트리 - 프림 <=====");
 			E01PrintTree_MinCostSpanning_08(oTree_MinCostSpanning, 'A');
 #elif A_E01_EXAMPLE_08_02
 			var oRandom = new Random();
@@ -137,7 +137,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 
 			var oTree_MinCostSpanning = E01CreateTree_MinCostSpanning_08(oGraph_Matrix);
 
-			Console.WriteLine("=====> 최소 비용 신장 트리 요소 - 크루스칼 <=====");
+			Console.WriteLine("=====> 최소 비용 신장 트리 - 크루스칼 <=====");
 			E01PrintTree_MinCostSpanning_08(oTree_MinCostSpanning, 'A');
 #endif // #if A_E01_EXAMPLE_08_01
 		}

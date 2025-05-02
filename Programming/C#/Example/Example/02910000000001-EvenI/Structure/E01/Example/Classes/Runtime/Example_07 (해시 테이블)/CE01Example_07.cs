@@ -44,7 +44,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 				oHashValues.AddVal(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 해시 요소 <=====");
+			Console.WriteLine("=====> 해시 <=====");
 
 			oHashValues.Enumerate((a_nIdx, a_nVal) =>
 			{
@@ -61,7 +61,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 				oHashValues.AddVal(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 해시 요소 <=====");
+			Console.WriteLine("=====> 해시 <=====");
 
 			oHashValues.Enumerate((a_nIdx, a_nVal) =>
 			{

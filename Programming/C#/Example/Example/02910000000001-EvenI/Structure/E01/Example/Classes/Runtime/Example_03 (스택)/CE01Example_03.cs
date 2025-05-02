@@ -32,7 +32,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 				Console.Write("{0}, ", i + 1);
 			}
 
-			Console.WriteLine("\n\n=====> 스택 요소 <=====");
+			Console.WriteLine("\n\n=====> 스택 <=====");
 
 			while(oStackValues.NumValues > 0)
 			{

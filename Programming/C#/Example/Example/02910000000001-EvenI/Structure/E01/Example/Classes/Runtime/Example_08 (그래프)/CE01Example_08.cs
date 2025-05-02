@@ -67,7 +67,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			oGraph_List.AddEdge('F', 'G', 1);
 			oGraph_List.AddEdge('G', 'D', 1);
 
-			Console.WriteLine("=====> 그래프 요소 <=====");
+			Console.WriteLine("=====> 그래프 <=====");
 
 			oGraph_List.Enumerate(CE01Graph_AdjacencyList_08_01<char, int>.EOrder.DEPTH_FIRST, 
 				'A', (a_chKey, a_nVal) =>
@@ -76,7 +76,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			});
 
 			oGraph_List.RemoveEdge('A', 'B');
-			Console.WriteLine("\n\n=====> 그래프 요소 - 간선 제거 후 <=====");
+			Console.WriteLine("\n\n=====> 그래프 - 간선 제거 후 <=====");
 
 			oGraph_List.Enumerate(CE01Graph_AdjacencyList_08_01<char, int>.EOrder.DEPTH_FIRST, 
 				'A', (a_chKey, a_nVal) =>
@@ -85,7 +85,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			});
 
 			oGraph_List.RemoveVertex('C');
-			Console.WriteLine("\n\n=====> 그래프 요소 - 정점 제거 후 <=====");
+			Console.WriteLine("\n\n=====> 그래프 - 정점 제거 후 <=====");
 
 			oGraph_List.Enumerate(CE01Graph_AdjacencyList_08_01<char, int>.EOrder.DEPTH_FIRST, 
 				'A', (a_chKey, a_nVal) =>
@@ -122,7 +122,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			oGraph_Matrix.AddEdge('F', 'G', 1);
 			oGraph_Matrix.AddEdge('G', 'D', 1);
 
-			Console.WriteLine("=====> 그래프 요소 <=====");
+			Console.WriteLine("=====> 그래프 <=====");
 
 			oGraph_Matrix.Enumerate(CE01Graph_AdjacencyMatrix_08_02<char, int>.EOrder.BREADTH_FIRST,
 				'A', (a_chKey, a_nVal) =>
@@ -131,7 +131,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			});
 
 			oGraph_Matrix.RemoveEdge('A', 'B');
-			Console.WriteLine("\n\n=====> 그래프 요소 - 간선 제거 후 <=====");
+			Console.WriteLine("\n\n=====> 그래프 - 간선 제거 후 <=====");
 
 			oGraph_Matrix.Enumerate(CE01Graph_AdjacencyMatrix_08_02<char, int>.EOrder.BREADTH_FIRST,
 				'A', (a_chKey, a_nVal) =>
@@ -140,7 +140,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			});
 
 			oGraph_Matrix.RemoveVertex('C');
-			Console.WriteLine("\n\n=====> 그래프 요소 - 정점 제거 후 <=====");
+			Console.WriteLine("\n\n=====> 그래프 - 정점 제거 후 <=====");
 
 			oGraph_Matrix.Enumerate(CE01Graph_AdjacencyMatrix_08_02<char, int>.EOrder.BREADTH_FIRST,
 				'A', (a_chKey, a_nVal) =>

@@ -53,17 +53,17 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 				oListValues.Add(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 리스트 요소 - 정렬 전 <=====");
+			Console.WriteLine("=====> 리스트 - 정렬 전 <=====");
 			E01PrintValues_03(oListValues);
 
 			E01SortValues_03(oListValues, E01Compare_ByAscending_03);
 
-			Console.WriteLine("\n=====> 리스트 요소 - 정렬 후 (오름차순) <=====");
+			Console.WriteLine("\n=====> 리스트 - 정렬 후 (오름차순) <=====");
 			E01PrintValues_03(oListValues);
 
 			E01SortValues_03(oListValues, E01Compare_ByDescending_03);
 
-			Console.WriteLine("\n=====> 리스트 요소 - 정렬 후 (내림차순) <=====");
+			Console.WriteLine("\n=====> 리스트 - 정렬 후 (내림차순) <=====");
 			E01PrintValues_03(oListValues);
 		}
 

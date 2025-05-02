@@ -45,7 +45,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 				oTreeValues.AddVal(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 이진 탐색 트리 요소 <=====");
+			Console.WriteLine("=====> 이진 탐색 트리 <=====");
 
 			oTreeValues.Enumerate(CE01Tree_BinarySearch_05<int>.EOrder.IN, (a_nVal) =>
 			{
@@ -53,7 +53,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			});
 
 			oTreeValues.AddVal(100);
-			Console.WriteLine("\n\n=====> 이진 탐색 트리 요소 - 추가 후 <=====");
+			Console.WriteLine("\n\n=====> 이진 탐색 트리 - 추가 후 <=====");
 
 			oTreeValues.Enumerate(CE01Tree_BinarySearch_05<int>.EOrder.IN, (a_nVal) =>
 			{
@@ -61,7 +61,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			});
 
 			oTreeValues.RemoveVal(100);
-			Console.WriteLine("\n\n=====> 이진 탐색 트리 요소 - 제거 후 <=====");
+			Console.WriteLine("\n\n=====> 이진 탐색 트리 - 제거 후 <=====");
 
 			oTreeValues.Enumerate(CE01Tree_BinarySearch_05<int>.EOrder.IN, (a_nVal) =>
 			{

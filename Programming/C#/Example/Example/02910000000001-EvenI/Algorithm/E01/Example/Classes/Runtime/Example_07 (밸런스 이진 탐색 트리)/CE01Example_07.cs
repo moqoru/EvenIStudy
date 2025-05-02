@@ -152,7 +152,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 				oTreeValues.AddVal(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> AVL 트리 요소 <=====");
+			Console.WriteLine("=====> AVL 트리 <=====");
 
 			oTreeValues.Enumerate(CE01Tree_AVL_07<int>.EOrder.IN, (a_nDepth, a_nVal) =>
 			{
@@ -165,7 +165,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			});
 
 			oTreeValues.AddVal(100);
-			Console.WriteLine("\n=====> AVL 트리 요소 - 추가 후 <=====");
+			Console.WriteLine("\n=====> AVL 트리 - 추가 후 <=====");
 
 			oTreeValues.Enumerate(CE01Tree_AVL_07<int>.EOrder.IN, (a_nDepth, a_nVal) =>
 			{
@@ -178,7 +178,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			});
 
 			oTreeValues.RemoveVal(100);
-			Console.WriteLine("\n=====> AVL 트리 요소 - 제거 후 <=====");
+			Console.WriteLine("\n=====> AVL 트리 - 제거 후 <=====");
 
 			oTreeValues.Enumerate(CE01Tree_AVL_07<int>.EOrder.IN, (a_nDepth, a_nVal) =>
 			{
@@ -198,7 +198,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 				oTreeValues.AddVal(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 레드 블랙 트리 요소 <=====");
+			Console.WriteLine("=====> 레드 블랙 트리 <=====");
 
 			oTreeValues.Enumerate(CE01Tree_RedBlack_07<int>.EOrder.IN, (a_nDepth, a_nVal) =>
 			{
@@ -211,7 +211,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			});
 
 			oTreeValues.AddVal(100);
-			Console.WriteLine("\n=====> 레드 블랙 트리 요소 - 추가 후 <=====");
+			Console.WriteLine("\n=====> 레드 블랙 트리 - 추가 후 <=====");
 
 			oTreeValues.Enumerate(CE01Tree_RedBlack_07<int>.EOrder.IN, (a_nDepth, a_nVal) =>
 			{
@@ -224,7 +224,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			});
 
 			oTreeValues.RemoveVal(100);
-			Console.WriteLine("\n=====> 레드 블랙 트리 요소 - 제거 후 <=====");
+			Console.WriteLine("\n=====> 레드 블랙 트리 - 제거 후 <=====");
 
 			oTreeValues.Enumerate(CE01Tree_RedBlack_07<int>.EOrder.IN, (a_nDepth, a_nVal) =>
 			{
