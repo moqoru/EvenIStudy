@@ -121,10 +121,10 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 특정 대상을 제어하는 것이 가능하다.
 			 */
 			oInfo_HpField.SetValue(oCharacter, 
-				(int)oInfo_HpField.GetValue(oCharacter) * 2.0f);
+				(int)oInfo_HpField.GetValue(oCharacter) * 2);
 
 			oInfo_AtkField.SetValue(oCharacter,
-				(int)oInfo_AtkField.GetValue(oCharacter) * 2.0f);
+				(int)oInfo_AtkField.GetValue(oCharacter) * 2);
 
 			Console.WriteLine("\n=====> 캐릭터 정보 - 변경 후 <=====");
 			oInfo_Method.Invoke(oCharacter, null);
