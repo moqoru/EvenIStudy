@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_02
+namespace Example._02910000000001_EvenI.Practice.E01.Example.Classes.Runtime.Example_02
 {
 	/**
 	 * 연결 리스트
