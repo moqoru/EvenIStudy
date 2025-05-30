@@ -85,8 +85,8 @@ namespace Example
 		static void Main(string[] args)
 		{
 			//Program.Main_Programming(args);
-			Program.Main_Structure(args);
-			//Program.Main_Algorithm(args);
+			//Program.Main_Structure(args);
+			Program.Main_Algorithm(args);
 		}
 
 		/** 프로그래밍 메인 메서드 */
@@ -150,6 +150,10 @@ namespace Example
 #endif // #if EXAMPLE
 		}
 
+		/*
+		 * 알고리즘 과제 1
+		 * - 착한 접미부 테이블을 구현해서 보이어무어 성능 개선하기
+		 */
 		/** 알고리즘 메인 메서드 */
 		private static void Main_Algorithm(string[] args)
 		{
