@@ -63,7 +63,7 @@ using System.Threading.Tasks;
  * Ex)
  * static class CSomeClass_Static
  * {
- *		static void SomeMethod_Extension(this int a_oSender)
+ *		static void SomeMethod_Extension(this int a_nSender)
  *		{
  *				// Do Something
  *		}
