@@ -147,7 +147,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			var oRandom = new Random();
 			var oTreeValues = new CE01Tree_AVL_07<int>();
 
-			for(int i = 0; i < 10; ++i)
+			for(int i = 0; i < 100; ++i)
 			{
 				oTreeValues.AddVal(oRandom.Next(1, 100));
 			}
@@ -193,7 +193,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			var oRandom = new Random();
 			var oTreeValues = new CE01Tree_RedBlack_07<int>();
 
-			for(int i = 0; i < 10; ++i)
+			for(int i = 0; i < 100; ++i)
 			{
 				oTreeValues.AddVal(oRandom.Next(1, 100));
 			}
