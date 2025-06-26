@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_01 (Basic).unity
+    guid: 4d850e058d8c9cd42aa859adaa293391
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_02 (Light).unity
+    guid: c4a79829ab31ecb4a9ef90c30b4faebb
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_03 (Camera).unity
+    guid: fd1b91de5d129ae4fb5e7bfb1f2a0701
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_04 (Prefab).unity
+    guid: 7106b23efb8b1b74ea55075e5c8b903b
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_05 (Turret
+      - Title).unity
+    guid: b78630733b256b14693434b039429ccf
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_06 (Turret
+      - Play).unity
+    guid: c64c46dcd75132e4bbf32f4c9e7cb3c2
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_07 (Turret
+      - Result).unity
+    guid: 3c1a73821c454ed4da6be0af5a7f4cd9
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_08 (Physics).unity
+    guid: 6e3661b2ba552ff489013ae6e35c5ae0
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_09 (Flappy
+      Bird - Title).unity
+    guid: 3bfd27ea1d5c45c41b06558858758210
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_10 (Flappy
+      Bird - Play).unity
+    guid: 076c406486caac347b60705a1a486636
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_11 (Flappy
+      Bird - Result).unity
+    guid: 1a6e32e16d798894db7d49da97586f9f
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_12 (Sprite).unity
+    guid: 127d0fb7a46634049b6a52a2945fe8f6
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_13 (Moly
+      Moly - Title).unity
+    guid: b81429fab15980342a05225bb67c84f2
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_14 (Moly
+      Moly - Play).unity
+    guid: 47d2a7767bfff934ba69afb6d528433c
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_15 (Moly
+      Moly - Result).unity
+    guid: 9c4fe113188211a4e99619085b207e75
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_16 (Rendering
+      Pipeline).unity
+    guid: 594be05257fbdbf4db4120e8f906bb82
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_17 (GUI).unity
+    guid: 4e92cb6a331a41847b9c75bc39561772
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_18 (Sound).unity
+    guid: e29f6c95b0c7cc34c8517c126b142ef7
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_19 (Navigation).unity
+    guid: d6c336751f02d8f4498b1b166a6cda2b
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_20 (3D
+      Tps - Title).unity
+    guid: 5a68427e48760214e8f1e4e0939e5ca7
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_21 (3D
+      Tps - Play).unity
+    guid: 4170432192fd8bc46ac8e630f87ff495
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_22 (3D
+      Tps - Result).unity
+    guid: 1f9cfc5d38932a24ebc4b27835869ee2
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_23 (Shader).unity
+    guid: 6e67bafb8332ab44cacd76d5ffde6e84
+  - enabled: 1
+    path: Assets/02910000000001-EvenI/6x/E01/Example/Scenes/_6x_E01Example_24 (Particle).unity
+    guid: 2706551178b0faa468c3666b26878c23
+  m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 3577824ad5111bb45963285fcbf5736e, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_UseUCBPForAssetBundles: 0
