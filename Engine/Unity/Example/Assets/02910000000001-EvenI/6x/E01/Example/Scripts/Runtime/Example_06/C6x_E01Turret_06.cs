@@ -56,8 +56,12 @@ namespace _6x_E01Example
 
 			do
 			{
+#if _6x_P01_PRACTICE_01
+				var oBullet = this.CreateBullet();
+#else
 				var oBullet = Factory.CreateGameObj_Clone<C6x_E01Bullet_06>("Bullet",
 					m_oPrefab_Bullet, oManager_Scene.GameObj_Bullets, Vector3.zero, m_oPrefab_Bullet.transform.localScale, Vector3.zero);
+#endif // #if _6x_P01_PRACTICE_01
 
 				oBullet.transform.position = this.transform.position;
 				oBullet.Shoot(oManager_Scene.Player.gameObject);
@@ -66,6 +70,33 @@ namespace _6x_E01Example
 				yield return Access.CoGetWait_ForSecs(fInterval);
 			} while(oManager_Scene.State != C6x_E01Example_06.EState.GAME_OVER);
 		}
-#endregion // 함수
+		#endregion // 함수
 	}
+
+#if _6x_P01_PRACTICE_01
+	/**
+	 * 터렛 - 과제
+	 */
+	public partial class C6x_E01Turret_06 : CComponent
+	{
+		#region 변수
+		[Header("=====> Turret - Game Objects <=====")]
+		[SerializeField] private List<GameObject> m_oListPrefabs_Bullet = null;
+		#endregion // 변수
+
+		#region 팩토리 함수
+		/** 총알 생성한다 */
+		private C6x_E01Bullet_06 CreateBullet()
+		{
+			int nIdx = Random.Range(0, m_oListPrefabs_Bullet.Count);
+			var oPrefab_Bullet = m_oListPrefabs_Bullet[nIdx];
+
+			var oManager_Scene = CManager_Scene.GetManager_Scene<C6x_E01Example_06>(KDefine.G_N_SCENE_EXAMPLE_06);
+
+			return Factory.CreateGameObj_Clone<C6x_E01Bullet_06>("Bullet",
+				oPrefab_Bullet, oManager_Scene.GameObj_Bullets, Vector3.zero, oPrefab_Bullet.transform.localScale, Vector3.zero);
+		}
+		#endregion // 팩토리 함수
+	}
+#endif // #if _6x_P01_PRACTICE_01
 }

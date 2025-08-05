@@ -41,6 +41,10 @@ namespace _6x_E01Example
 			 */
 			m_oCollider = this.GetComponentInChildren<Collider>();
 			m_oCollider.enabled = false;
+
+#if _6x_P01_PRACTICE_01
+			this.Awake_Internal();
+#endif // #if _6x_P01_PRACTICE_01
 		}
 
 		/** 상태를 갱신한다 */
@@ -48,6 +52,10 @@ namespace _6x_E01Example
 		{
 			base.OnUpdate(a_fTime_Delta);
 			this.transform.localPosition += this.Velocity * a_fTime_Delta;
+
+#if _6x_P01_PRACTICE_01
+			this.OnUpdateState_Bullet(a_fTime_Delta);
+#endif // #if _6x_P01_PRACTICE_01
 		}
 
 		/** 총알을 발사한다 */
@@ -63,4 +71,79 @@ namespace _6x_E01Example
 		}
 		#endregion // 함수
 	}
+
+#if _6x_P01_PRACTICE_01
+	/**
+	 * 총알 - 과제
+	 */
+	public partial class C6x_E01Bullet_06 : CComponent
+	{
+		/**
+		 * 총알 타입
+		 */
+		public enum EType_Bullet
+		{
+			NONE = -1,
+			BLUE,
+			YELLOW,
+			[HideInInspector] MAX_VAL
+		}
+
+		#region 변수
+		[Header("=====> Bullet - Etc <======")]
+		[SerializeField] private EType_Bullet m_eType_Bullet = EType_Bullet.NONE;
+
+		[Header("=====> Bullet - Game Objects <======")]
+		private GameObject m_oGameObj_Player = null;
+		#endregion // 변수
+
+		#region 함수
+		/** 초기화 */
+		private void Awake_Internal()
+		{
+			var oManager_Scene = CManager_Scene.GetManager_Scene<C6x_E01Example_06>(KDefine.G_N_SCENE_EXAMPLE_06);
+			m_oGameObj_Player = oManager_Scene.Player.gameObject;
+		}
+
+		/** 총알 상태를 갱신한다 */
+		private void OnUpdateState_Bullet(float a_fTime_Delta)
+		{
+			switch(m_eType_Bullet)
+			{
+				case EType_Bullet.BLUE:
+					this.OnUpdateState_BlueBullet(a_fTime_Delta);
+					break;
+
+				case EType_Bullet.YELLOW:
+					this.OnUpdateState_YellowBullet(a_fTime_Delta);
+					break;
+			}
+		}
+
+		/** 총알 상태를 갱신한다 */
+		private void OnUpdateState_BlueBullet(float a_fTime_Delta)
+		{
+			this.transform.localScale += (Vector3.one * 25.0f) * a_fTime_Delta;
+		}
+
+		/** 총알 상태를 갱신한다 */
+		private void OnUpdateState_YellowBullet(float a_fTime_Delta)
+		{
+			var stDirection = m_oGameObj_Player.transform.localPosition -
+				this.transform.localPosition;
+
+			// 추적이 불가능 할 경우
+			if(stDirection.magnitude.ExIsGreat(250.0f))
+			{
+				return;
+			}
+
+			float fAngle = Vector3.SignedAngle(this.Velocity.normalized,
+				stDirection.normalized, Vector3.up) * 0.03f;
+
+			this.Velocity = Quaternion.AngleAxis(fAngle, Vector3.up) * this.Velocity;
+		}
+		#endregion // 함수
+	}
+#endif // #if _6x_P01_PRACTICE_01
 }
