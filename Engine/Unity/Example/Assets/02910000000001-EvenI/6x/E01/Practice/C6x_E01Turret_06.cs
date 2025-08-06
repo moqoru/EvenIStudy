@@ -8,7 +8,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace _6x_E01Example
+namespace _6x_E01Practice
 {
 	/**
 	 * 터렛
