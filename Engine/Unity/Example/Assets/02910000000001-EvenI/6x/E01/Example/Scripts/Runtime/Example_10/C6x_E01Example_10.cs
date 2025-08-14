@@ -98,6 +98,14 @@ namespace _6x_E01Example
 				var oObstacle = this.ListGameObjects_Obstacle[i];
 				oObstacle.transform.localPosition += (Vector3.left * 350.0f) * a_fTime_Delta;
 			}
+
+#if _6x_P01_PRACTICE_02
+			for(int i = 0; i < this.ListGameObjects_Obstacle.Count; ++i)
+			{
+				var oObstacle = this.ListGameObjects_Obstacle[i].GetComponentInChildren<C6x_E01Obstacle_10>();
+				oObstacle.OnUpdate(a_fTime_Delta);
+			}
+#endif // #if _6x_P01_PRACTICE_02
 		}
 
 		/** 충돌 시작을 처리한다 */
@@ -133,7 +141,17 @@ namespace _6x_E01Example
 			}
 
 			int nScore = C6x_E01Storage_Result_10.Inst.Score;
+
+#if _6x_P01_PRACTICE_02
+			var oObstacle = a_oCollider.GetComponentInParent<C6x_E01Obstacle_10>();
+
+			int nScore_Incr = (oObstacle.Type_Obstacle == C6x_E01Obstacle_10.EType_Obstacle.NORM) ?
+				1 : 2;
+
+			C6x_E01Storage_Result_10.Inst.SetScore(nScore + nScore_Incr);
+#else
 			C6x_E01Storage_Result_10.Inst.SetScore(nScore + 1);
+#endif // #if _6x_P01_PRACTICE_02
 		}
 		#endregion // 함수
 	}

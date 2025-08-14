@@ -175,7 +175,7 @@ namespace _6x_E01Example
 				 * 수행한다. (+ 즉, 해당 메서드를 활용하면 물리 엔진을 이용해 물리 현상을 
 				 * 시뮬레이션하는 것이 가능하다.)
 				 */
-				oRigidbody.AddForceAtPosition(stForce, 
+				oRigidbody.AddForceAtPosition(stForce,
 					stPos_At, ForceMode.VelocityChange);
 			}
 
