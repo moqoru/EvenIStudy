@@ -35,7 +35,7 @@ using System.Threading.Tasks;
  * 
  * Ex)
  * void SomeMethod(int a_nVal);
- * void SomeMethod(int a_nValA, int a_nValA);
+ * void SomeMethod(int a_nValA, int a_nValB);
  * 
  * 위의 경우 매개 변수의 개수가 다르기 때문에 메서드 오버로딩 규칙이 성립한다.
  * 
