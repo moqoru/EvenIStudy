@@ -139,6 +139,10 @@ namespace _6x_E01Example
 			int nScore = C6x_E01Storage_Result_14.Inst.Score;
 			int nScore_Incr = (oMoly.Type_Moly == C6x_E01Moly_14.EType_Moly.A) ? 10 : -20;
 
+#if _6x_P01_PRACTICE_03
+			nScore_Incr = oMoly.IsSpecial ? nScore_Incr * 2 : nScore_Incr;
+#endif // #if _6x_P01_PRACTICE_03
+
 			C6x_E01Storage_Result_14.Inst.SetScore(Mathf.Max(nScore + nScore_Incr, 0));
 
 			var oScore = Factory.CreateGameObj_Clone<C6x_E01UIScore_14>("Score",

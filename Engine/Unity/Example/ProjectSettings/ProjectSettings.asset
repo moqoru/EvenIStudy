@@ -838,7 +838,7 @@ PlayerSettings:
     PS5: DOTWEEN
     QNX: DOTWEEN
     ReservedCFE: DOTWEEN
-    Standalone: DOTWEEN;_6x_P01_PRACTICE_01;_6x_P01_PRACTICE_02
+    Standalone: DOTWEEN;_6x_P01_PRACTICE_01;_6x_P01_PRACTICE_02;_6x_P01_PRACTICE_03
     VisionOS: DOTWEEN
     WebGL: DOTWEEN
     Windows Store Apps: DOTWEEN
