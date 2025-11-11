@@ -175,8 +175,14 @@ namespace _6x_E01Example
 				 * 수행한다. (+ 즉, 해당 메서드를 활용하면 물리 엔진을 이용해 물리 현상을 
 				 * 시뮬레이션하는 것이 가능하다.)
 				 */
-				oRigidbody.AddForceAtPosition(stForce,
-					stPos_At, ForceMode.VelocityChange);
+				oRigidbody.AddForce(stForce, ForceMode.VelocityChange);
+
+				/*
+				 * Rigidbody.AddTorque 메서드는 게임 객체의 각속도를 변경하는 역할을
+				 * 수행한다. (+ 즉, 해당 메서드를 활용하면 물리 엔진을 이용해 물체를 
+				 * 회전 시키는 것이 가능하다.)
+				 */
+				oRigidbody.AddTorque(Vector3.forward * -10.0f, ForceMode.VelocityChange);
 			}
 
 			/*
